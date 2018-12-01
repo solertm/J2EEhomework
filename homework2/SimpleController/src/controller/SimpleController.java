@@ -97,7 +97,7 @@ public class SimpleController extends HttpServlet {
 		
 //		
 		private String doaction(String path,String method) throws Exception {
-			Class actionclass=Class.forName("water.ustc.action.LoginAction");
+			Class actionclass=Class.forName(path);
 			Object action=actionclass.newInstance();
 			if(actionclass == null)System.out.println("is null!");
 			
